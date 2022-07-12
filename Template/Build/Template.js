@@ -132,7 +132,7 @@ var Template;
             Ylva: {
                 T0001: "Es ist kein Scherz Maddox.",
                 T0002: "Es fällt mir wirklich auch schwer. Aber es wird Zeit, dass ich mir was eigenes aufbaue.",
-                T0003: "Zusammen mit Riaz",
+                T0003: "Zusammen mit Riaz.",
                 T0004: "Ich muss das tun!",
                 T0005: "Ich weiß. Nenne mir den Preis und ich werde ihn bezahlen. "
             },
@@ -1154,12 +1154,13 @@ var Template;
     }
     Template.showCredits = showCredits;
     Template.inGameMenu = {
-        save: "Save",
-        load: "Load",
-        close: "Close",
+        save: "Speichern",
+        load: "Laden",
+        close: "Schließen",
         turnUpVolume: "+",
         turndownVolume: "-",
         credits: "Credits",
+        inventar: "Inventar"
     };
     async function buttonFunctionalities(_option) {
         console.log(_option);
@@ -1182,6 +1183,9 @@ var Template;
                 break;
             case Template.inGameMenu.credits:
                 showCredits();
+                break;
+            case Template.inGameMenu.inventar:
+                await Template.ƒS.Inventory.open();
                 break;
         }
     }
@@ -1218,7 +1222,8 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
-            { scene: Template.Prolog, name: "Prolog" },
+            //  { scene: Prolog, name: "Prolog" },
+            { scene: Template.Monolog, name: "Monolog" },
         ];
         // start the sequence
         Template.ƒS.Progress.go(scenes);
@@ -1266,7 +1271,9 @@ var Template;
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0007);
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0008);
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0009);
+        Template.ƒS.Inventory.add(Template.items.armband);
         Template.ƒS.Speech.hide();
+        await Template.ƒS.update();
         await Template.ƒS.Character.hide(Template.characters.ylva);
         await Template.ƒS.update(1);
         Template.ƒS.Sound.fade(Template.sound.Glass, 0, 1);

@@ -149,15 +149,19 @@ dialog[type="inventory"]>ul {
 }
 
 dialog[type="inventory"]>ul>li {
-  width: 15vw;
+  width: 15vw; 
   height: 10vw;
   border: solid rgb(199, 199, 199);
   border-radius: 10px;
-  /* border-: ; */
   list-style-type: none;
   margin-bottom: 10px;
 }
 
+/* Items */
+.armband{
+  position: center;
+  scale: 0.2, 0.2;
+}
 
 
 

@@ -7,7 +7,7 @@ namespace Template {
       Ylva: {
         T0001: "Es ist kein Scherz Maddox.",
         T0002: "Es fällt mir wirklich auch schwer. Aber es wird Zeit, dass ich mir was eigenes aufbaue.",
-        T0003: "Zusammen mit Riaz",
+        T0003: "Zusammen mit Riaz.",
         T0004: "Ich muss das tun!",
         T0005: "Ich weiß. Nenne mir den Preis und ich werde ihn bezahlen. "
 

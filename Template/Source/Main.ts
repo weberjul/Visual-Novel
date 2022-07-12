@@ -287,12 +287,13 @@ namespace Template {
   }
 
   export let inGameMenu = {
-    save: "Save",
-    load: "Load",
-    close: "Close",
+    save: "Speichern",
+    load: "Laden",
+    close: "Schließen",
     turnUpVolume: "+",
     turndownVolume: "-",
     credits: "Credits",
+    inventar: "Inventar"
   };
 
 
@@ -317,6 +318,9 @@ namespace Template {
         break;
       case inGameMenu.credits:
         showCredits();
+        break;
+      case inGameMenu.inventar:
+        await ƒS.Inventory.open();
         break;
     }
   }
@@ -376,8 +380,9 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      { scene: Prolog, name: "Prolog" },
-   
+      //  { scene: Prolog, name: "Prolog" },
+      { scene: Monolog, name: "Monolog" },
+
     ];
 
 

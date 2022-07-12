@@ -47,11 +47,13 @@ namespace Template {
         await ƒS.Speech.tell(characters.ylva, text.Ylva.T0007);
         await ƒS.Speech.tell(characters.ylva, text.Ylva.T0008);
         await ƒS.Speech.tell(characters.ylva, text.Ylva.T0009);
+        ƒS.Inventory.add(items.armband);
 
 
 
         ƒS.Speech.hide();
-        await ƒS.Character.hide(characters.ylva);
+        await ƒS.update();
+        await ƒS.Character.hide(characters.ylva); 
         await ƒS.update(1);
         ƒS.Sound.fade(sound.Glass, 0, 1);
         ƒS.Sound.fade(sound.Birds, 0, 0);

@@ -253,6 +253,7 @@ declare namespace Template {
         turnUpVolume: string;
         turndownVolume: string;
         credits: string;
+        inventar: string;
     };
     function buttonFunctionalities(_option: string): Promise<void>;
     let dataSave: {};
