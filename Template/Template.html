@@ -8,7 +8,7 @@
   <script src="Fudge/FudgeCore.js"></script>
   <script src="FudgeStory/FudgeStory.js"></script>
   <script src="./Build/Template.js"></script>
-  <title>Fudge Story Template</title>
+  <title>Price of Freedom</title>
   <splash src="Images/Splash.png" />
 </head>
 
@@ -16,23 +16,44 @@
   <scene>
 
     <dialog type="splash" open>
-      <img id="FudgeStoryLogo" theme="light" /> <!-- use "light" or "dark" -->
-      <p>
-        Design your splash screen here. Reposition and rescale the logo above, but do not remove.
-      </p>
+      <img id="FudgeStoryLogo" height="200vw" width="auto" theme="dark" /> <!-- use "light" or "dark" -->
+      <img id="title" src="/Images/title.jpeg" height="400vw" width="auto">
     </dialog>
 
     <canvas></canvas>
 
 
-    <speech>
-      <name>The name of the character speaking</name>
-      <content>The text the character says</content>
+    <speech id="speechBox">
+      <name></name>
+      <content></content>
     </speech>
 
+
+
     <dialog type="text">
-      The content of a page of text for reading
     </dialog>
+
+    <!--  <dialog type="inventory">
+      <button type="button">close</button>
+      <ul>
+        <li>a description could be written in here</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li> 
+      </ul>
+    </dialog> -->
+
+
+
+    <dialog type="inventory">
+      <button type="button">Schließen</button>
+      <ul></ul>
+    </dialog>
+
+
+
+
 
   </scene>
 </body>
