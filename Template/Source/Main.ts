@@ -281,7 +281,7 @@ namespace Template {
 
   export function showCredits(): void {
     ƒS.Text.addClass("credits");
-    ƒS.Text.print("Hier könnten jetzt Credits stehen.");
+    ƒS.Text.print("<h1> Credits </h1><p><b> Story: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Julia Weber <br><b> Texte: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Julia Weber <br><b> Bilder: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Julia Weber <br><b>Titelbild: </b> &nbsp; Julia Weber<br><b>Musik: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Youtube Library<br></p>");
 
     // showCredits();
   }

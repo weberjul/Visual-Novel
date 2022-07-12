@@ -1149,7 +1149,7 @@ var Template;
     Template.decrementSound = decrementSound;
     function showCredits() {
         Template.ƒS.Text.addClass("credits");
-        Template.ƒS.Text.print("Hier könnten jetzt Credits stehen.");
+        Template.ƒS.Text.print("<h1> Credits </h1><p><b> Story: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Julia Weber <br><b> Texte: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Julia Weber <br><b> Bilder: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Julia Weber <br><b>Titelbild: </b> &nbsp; Julia Weber<br><b>Musik: </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Youtube Library<br></p>");
         // showCredits();
     }
     Template.showCredits = showCredits;
