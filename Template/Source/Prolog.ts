@@ -7,6 +7,7 @@ namespace Template {
 
     let text = {
       Narrator: {
+        T0000: "",
         T0001: "Einsamkeit",
         T0002: "das erste Gefühl, das sie kannte.",
         T0003: "Von den Eltern ausgesetzt,",
@@ -44,70 +45,88 @@ namespace Template {
     document.getElementById("speechBox").setAttribute("style", "display: block;");
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0001);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0002);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.help, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0003);
-
-
-
-
-
-
-    await ƒS.Speech.tell(characters.narrator, text.Narrator.T0025);
-
-
-    ƒS.update();
-    ƒS.Character.show(characters.ylva, characters.ylva.pose.normal, ƒS.positionPercent(0, 93.5));
-    ƒS.update(1);
-    ƒS.Speech.tell(characters.narrator, text.Narrator.T0025);
-    ƒS.Character.hide(characters.ylva);
-    ƒS.update(1);
-    ƒS.Character.show(characters.ylva, characters.ylva.pose.pointing, ƒS.positionPercent(0, 93.5));
-    ƒS.update(1);
-    ƒS.Speech.tell(characters.narrator, text.Narrator.T0025);
-    ƒS.Character.hide(characters.ylva);
-    ƒS.update(1);
-    ƒS.Character.show(characters.ylva, characters.ylva.pose.normal, ƒS.positionPercent(0, 93.5));
-    ƒS.update(1);
-    ƒS.Speech.tell(characters.narrator, text.Narrator.T0025);
-    ƒS.Character.hide(characters.ylva);
-    ƒS.update(1);
-    ƒS.Character.show(characters.ylva, characters.ylva.pose.pointing, ƒS.positionPercent(0, 93.5));
-    ƒS.update(1);
-    ƒS.Speech.tell(characters.narrator, text.Narrator.T0025);
-    ƒS.Character.hide(characters.ylva);
-    ƒS.update(1);
-    ƒS.Character.show(characters.ylva, characters.ylva.pose.normal, ƒS.positionPercent(0, 93.5));
-    ƒS.update(1);
-    ƒS.Speech.tell(characters.narrator, text.Narrator.T0025);
-    ƒS.Character.hide(characters.ylva);
-    ƒS.update(1);
-
-
-
-
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0004);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0005);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.trauer, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0006);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.update(1);
+    await ƒS.Character.show(characters.little, characters.little.pose.wut, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0007);
-
-
-
-
-
+    await ƒS.Character.hide(characters.little);
+    await ƒS.update(1);
+    await ƒS.Character.show(characters.little, characters.little.pose.schmerz, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0008);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.update(1);
+    await ƒS.Character.show(characters.little, characters.little.pose.hoffnungslosigkeit, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0009);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0010);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run1, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run2, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run3, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run1, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run2, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run3, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0011);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run1, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run2, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.run3, ƒS.positionPercent(50, 10));
+    await ƒS.update(1);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0012);
+    await ƒS.Character.show(characters.little, characters.little.pose.betteln, ƒS.positionPercent(40, 10));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0013);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0014);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.show(characters.little, characters.little.pose.maddoxbegin, ƒS.positionPercent(40, 10));
+    await ƒS.Character.show(characters.maddox, characters.maddox.pose.ylvabegin, ƒS.positionPercent(50, 69));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0015);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0016);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0017);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0018);
+    await ƒS.Character.hide(characters.little);
+    await ƒS.Character.hide(characters.maddox);
+    await ƒS.update(1);
+    await ƒS.Character.show(characters.ylva, characters.ylva.pose.hips, ƒS.positionPercent(30, 76));
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0019);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0020);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0021);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0022);
+    await ƒS.Character.hide(characters.ylva);
+    await ƒS.update(1);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0023);
     await ƒS.Speech.tell(characters.narrator, text.Narrator.T0024);
     ƒS.Sound.fade(sound.NeverSurrender, 0, 1);

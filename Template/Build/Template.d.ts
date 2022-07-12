@@ -188,6 +188,7 @@ declare namespace Template {
                 laugh: string;
                 thinking: string;
                 grave: string;
+                ylvabegin: string;
             };
         };
         cat: {
@@ -203,6 +204,16 @@ declare namespace Template {
             origin: ƒ.ORIGIN2D;
             pose: {
                 alone: string;
+                trauer: string;
+                wut: string;
+                schmerz: string;
+                hoffnungslosigkeit: string;
+                betteln: string;
+                help: string;
+                maddoxbegin: string;
+                run1: string;
+                run2: string;
+                run3: string;
             };
         };
     };

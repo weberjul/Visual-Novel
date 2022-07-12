@@ -176,6 +176,7 @@ namespace Template {
         laugh: "/Images/Charakter/Maddox/laugh.png",
         thinking: "/Images/Charakter/Maddox/thinking.png",
         grave: "/Images/Charakter/Maddox/grave1.png",
+        ylvabegin: "/Images/Charakter/Maddox/ylva.png"
 
       }
     },
@@ -188,16 +189,21 @@ namespace Template {
       }
     },
 
-
-
-
-
-
     little: {
       name: "Little",
       origin: ƒS.ORIGIN.TOPCENTER,
       pose: {
         alone: "/Images/Charakter/Little/alone.png",
+        trauer: "/Images/Charakter/Little/trauer.png",
+        wut: "/Images/Charakter/Little/wut.png",
+        schmerz: "/Images/Charakter/Little/schmerz.png",
+        hoffnungslosigkeit: "/Images/Charakter/Little/hoffnungslosigkeit.png",
+        betteln: "/Images/Charakter/Little/betteln.png",
+        help: "/Images/Charakter/Little/help.png",
+        maddoxbegin: "/Images/Charakter/Little/maddox.png",
+        run1: "/Images/Charakter/Little/run1.png",
+        run2: "/Images/Charakter/Little/run2.png",
+        run3: "/Images/Charakter/Little/run3.png"
       }
     }
   };
@@ -370,26 +376,8 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      // { scene: Prolog, name: "Prolog" },
-      /*  { scene: DerNeue, name: "DerNeue" },
-        { scene: DieErsteMission, name: "DieErsteMission" }, 
-        { scene: InDerKüche, name: "InDerKüche" },
-        { scene: ImSchlafzimmer, name: "ImSchlafzimmer" },
-        { scene: Boss, name: "Boss" }, 
-        { scene: Lagebesprechung, name: "Lagebesprechung" }, 
-       { scene: Monolog, name: "Monolog" },  */
-        { scene: ZeitVergeht, name: "ZeitVergeht" }, 
-      /*  { scene: JemandBrauchtHilfe, name: "JemandBrauchtHilfe" }, 
-        { scene: DieKatze, name: "DieKatze" },      
-        { scene: UnsereZukunft, name:"UnsereZukunft"}, 
-         { scene: DerPreis, name: "DerPreis" }, 
-         { scene: Items, name: "Items" },
-         { scene: HappyEnd, name: "HappyEnd" }, 
-         { scene: LastScene, name: "LastScene" }, 
-        { scene: DieLetzteMission, name:"DieLetzteMission"}, 
-       { scene: Riaz, name:"Riaz"},
-         { scene: Ylva, name:"Ylva"} , 
-           { scene: Dead, name:"Dead"} */
+      { scene: Prolog, name: "Prolog" },
+   
     ];
 
 

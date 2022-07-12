@@ -1064,6 +1064,7 @@ var Template;
                 laugh: "/Images/Charakter/Maddox/laugh.png",
                 thinking: "/Images/Charakter/Maddox/thinking.png",
                 grave: "/Images/Charakter/Maddox/grave1.png",
+                ylvabegin: "/Images/Charakter/Maddox/ylva.png"
             }
         },
         cat: {
@@ -1079,6 +1080,16 @@ var Template;
             origin: Template.ƒS.ORIGIN.TOPCENTER,
             pose: {
                 alone: "/Images/Charakter/Little/alone.png",
+                trauer: "/Images/Charakter/Little/trauer.png",
+                wut: "/Images/Charakter/Little/wut.png",
+                schmerz: "/Images/Charakter/Little/schmerz.png",
+                hoffnungslosigkeit: "/Images/Charakter/Little/hoffnungslosigkeit.png",
+                betteln: "/Images/Charakter/Little/betteln.png",
+                help: "/Images/Charakter/Little/help.png",
+                maddoxbegin: "/Images/Charakter/Little/maddox.png",
+                run1: "/Images/Charakter/Little/run1.png",
+                run2: "/Images/Charakter/Little/run2.png",
+                run3: "/Images/Charakter/Little/run3.png"
             }
         }
     };
@@ -1207,26 +1218,7 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
-            // { scene: Prolog, name: "Prolog" },
-            /*  { scene: DerNeue, name: "DerNeue" },
-              { scene: DieErsteMission, name: "DieErsteMission" },
-              { scene: InDerKüche, name: "InDerKüche" },
-              { scene: ImSchlafzimmer, name: "ImSchlafzimmer" },
-              { scene: Boss, name: "Boss" },
-              { scene: Lagebesprechung, name: "Lagebesprechung" },
-             { scene: Monolog, name: "Monolog" },  */
-            { scene: Template.ZeitVergeht, name: "ZeitVergeht" },
-            /*  { scene: JemandBrauchtHilfe, name: "JemandBrauchtHilfe" },
-              { scene: DieKatze, name: "DieKatze" },
-              { scene: UnsereZukunft, name:"UnsereZukunft"},
-               { scene: DerPreis, name: "DerPreis" },
-               { scene: Items, name: "Items" },
-               { scene: HappyEnd, name: "HappyEnd" },
-               { scene: LastScene, name: "LastScene" },
-              { scene: DieLetzteMission, name:"DieLetzteMission"},
-             { scene: Riaz, name:"Riaz"},
-               { scene: Ylva, name:"Ylva"} ,
-                 { scene: Dead, name:"Dead"} */
+            { scene: Template.Prolog, name: "Prolog" },
         ];
         // start the sequence
         Template.ƒS.Progress.go(scenes);
@@ -1292,6 +1284,7 @@ var Template;
         console.log("FudgeStory Scene starting");
         let text = {
             Narrator: {
+                T0000: "",
                 T0001: "Einsamkeit",
                 T0002: "das erste Gefühl, das sie kannte.",
                 T0003: "Von den Eltern ausgesetzt,",
@@ -1326,53 +1319,88 @@ var Template;
         document.getElementById("speechBox").setAttribute("style", "display: block;");
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0001);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0002);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.help, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0003);
-        await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0025);
-        Template.ƒS.update();
-        Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.normal, Template.ƒS.positionPercent(0, 93.5));
-        Template.ƒS.update(1);
-        Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0025);
-        Template.ƒS.Character.hide(Template.characters.ylva);
-        Template.ƒS.update(1);
-        Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.pointing, Template.ƒS.positionPercent(0, 93.5));
-        Template.ƒS.update(1);
-        Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0025);
-        Template.ƒS.Character.hide(Template.characters.ylva);
-        Template.ƒS.update(1);
-        Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.normal, Template.ƒS.positionPercent(0, 93.5));
-        Template.ƒS.update(1);
-        Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0025);
-        Template.ƒS.Character.hide(Template.characters.ylva);
-        Template.ƒS.update(1);
-        Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.pointing, Template.ƒS.positionPercent(0, 93.5));
-        Template.ƒS.update(1);
-        Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0025);
-        Template.ƒS.Character.hide(Template.characters.ylva);
-        Template.ƒS.update(1);
-        Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.normal, Template.ƒS.positionPercent(0, 93.5));
-        Template.ƒS.update(1);
-        Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0025);
-        Template.ƒS.Character.hide(Template.characters.ylva);
-        Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0004);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0005);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.trauer, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0006);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.wut, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0007);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.schmerz, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0008);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.hoffnungslosigkeit, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0009);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0010);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run1, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run2, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run3, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run1, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run2, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run3, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0011);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run1, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run2, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.run3, Template.ƒS.positionPercent(50, 10));
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0012);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.betteln, Template.ƒS.positionPercent(40, 10));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0013);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0014);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.show(Template.characters.little, Template.characters.little.pose.maddoxbegin, Template.ƒS.positionPercent(40, 10));
+        await Template.ƒS.Character.show(Template.characters.maddox, Template.characters.maddox.pose.ylvabegin, Template.ƒS.positionPercent(50, 69));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0015);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0016);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0017);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0018);
+        await Template.ƒS.Character.hide(Template.characters.little);
+        await Template.ƒS.Character.hide(Template.characters.maddox);
+        await Template.ƒS.update(1);
+        await Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.hips, Template.ƒS.positionPercent(30, 76));
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0019);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0020);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0021);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0022);
+        await Template.ƒS.Character.hide(Template.characters.ylva);
+        await Template.ƒS.update(1);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0023);
         await Template.ƒS.Speech.tell(Template.characters.narrator, text.Narrator.T0024);
         Template.ƒS.Sound.fade(Template.sound.NeverSurrender, 0, 1);
