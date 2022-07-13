@@ -75,7 +75,7 @@ namespace Template {
     },
     shelter: {
       name: "shelter",
-      background: "PriceOfFreedom/Images/Places/shelter1.jpeg"
+      background: "Images/Places/shelter1.jpeg"
 
     },
     missionone: {
