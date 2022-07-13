@@ -416,7 +416,7 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      { scene: Monolog, name: "Prolog" },
+      { scene: Prolog, name: "Prolog" },
 
     ];
 

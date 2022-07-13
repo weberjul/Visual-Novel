@@ -1284,7 +1284,7 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
-            { scene: Template.Monolog, name: "Prolog" },
+            { scene: Template.Prolog, name: "Prolog" },
         ];
         // start the sequence
         Template.ƒS.Progress.go(scenes);
