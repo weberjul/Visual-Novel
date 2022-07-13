@@ -906,8 +906,8 @@ var Template;
                 break;
             case monologAnswer.iSayBett:
                 await Template.ƒS.Speech.tell(Template.characters.ylva, "Ich bin Hundemüde, ich sollte ins Bett!");
-                Template.ƒS.Sound.fade(Template.sound.CosmicDrift, 0, 1);
                 Template.ƒS.Character.hide(Template.characters.ylva);
+                Template.ƒS.Sound.fade(Template.sound.CosmicDrift, 0, 1);
                 await Template.ƒS.update(1);
                 Template.ƒS.Speech.clear();
                 Template.ƒS.Speech.hide();
