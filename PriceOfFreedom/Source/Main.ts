@@ -41,7 +41,7 @@ namespace Template {
 
   export let sound = {
     //themes
-    NeverSurrender: "Sounds/NeverSurrender.mp3",
+    NeverSurrender: "Sounds/Musik/NeverSurrender.mp3",
     AFool: "Sounds/Musik/AFool.mp3",
     Mission: "Sounds/Musik/Mission.mp3",
     Dead: "Sounds/Musik/TakeMeBack.mp3",
@@ -193,7 +193,7 @@ namespace Template {
       name: "Little",
       origin: ƒS.ORIGIN.TOPCENTER,
       pose: {
-        alone: "Images/Charakter/alone.png",
+        alone: "Images/Charakter/Little/alone.png",
         trauer: "Images/Charakter/Little/trauer.png",
         wut: "Images/Charakter/Little/wut.png",
         schmerz: "Images/Charakter/Little/schmerz.png",
