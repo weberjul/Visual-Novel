@@ -147,6 +147,7 @@ namespace Template {
         break;
       case monologAnswer.iSayBett:
         await ƒS.Speech.tell(characters.ylva, "Ich bin Hundemüde, ich sollte ins Bett!");
+        ƒS.Sound.fade(sound.CosmicDrift, 0, 1);
         ƒS.Character.hide(characters.ylva);
         await ƒS.update(1);
         ƒS.Speech.clear();
