@@ -945,95 +945,95 @@ var Template;
     Template.transitions = {
         time: {
             duration: 3,
-            alpha: "/Transitions/008.jpg",
+            alpha: "Transitions/008.jpg",
             edge: 1
         },
         normal: {
             duration: 2,
-            alpha: "/Transitions/005.jpg",
+            alpha: "Transitions/005.jpg",
             edge: 1
         },
         correct: {
             duration: 2,
-            alpha: "/Transitions/012.jpg",
+            alpha: "Transitions/012.jpg",
             edge: 1
         },
         dead: {
             duration: 2,
-            alpha: "/Transitions/21.jpg",
+            alpha: "Transitions/21.jpg",
             edge: 1
         },
         fail: {
             duration: 2,
-            alpha: "/Transitions/019.png",
+            alpha: "Transitions/019.png",
             edge: 1
         }
     };
     Template.sound = {
         //themes
-        NeverSurrender: "/Sounds/Musik/NeverSurrender.mp3",
-        AFool: "/Sounds/Musik/AFool.mp3",
-        Mission: "/Sounds/Musik/Mission.mp3",
-        Dead: "/Sounds/Musik/TakeMeBack.mp3",
-        Sinister: "/Sounds/Musik/Sinister.mp3",
-        CosmicDrift: "/Sounds/Musik/CosmicDrift.mp3",
-        Glass: "/Sounds/Musik/Glass.mp3",
-        Love: "/Sounds/Musik/Love.mp3",
-        WakeUp: "/Sounds/Musik/WakeUp.mp3",
+        NeverSurrender: "Sounds/Musik/NeverSurrender.mp3",
+        AFool: "Sounds/Musik/AFool.mp3",
+        Mission: "Sounds/Musik/Mission.mp3",
+        Dead: "Sounds/Musik/TakeMeBack.mp3",
+        Sinister: "Sounds/Musik/Sinister.mp3",
+        CosmicDrift: "Sounds/Musik/CosmicDrift.mp3",
+        Glass: "Sounds/Musik/Glass.mp3",
+        Love: "Sounds/Musik/Love.mp3",
+        WakeUp: "Sounds/Musik/WakeUp.mp3",
         //SFX
-        Wind: "/Sounds/SFX/Wind.mp3",
-        Car: "/Sounds/SFX/Car.mp3",
-        Birds: "/Sounds/SFX/Birds.mp3",
-        Door: "/Sounds/SFX/Door.mp3",
-        Window: "/Sounds/SFX/Window.mp3",
-        Laugh: "/Sounds/SFX/Laugh.mp3",
-        Woodpecker: "/Sounds/SFX/Woodpecker.mp3",
-        Water: "/Sounds/SFX/Water.mp3",
-        Psst: "/Sounds/SFX/psst.mp3",
-        Hilfe: "/Sounds/SFX/hilfe.mp3",
-        Miau: "/Sounds/SFX/miau.mp3",
-        Purr: "/Sounds/SFX/purr.mp3"
+        Wind: "Sounds/SFX/Wind.mp3",
+        Car: "Sounds/SFX/Car.mp3",
+        Birds: "Sounds/SFX/Birds.mp3",
+        Door: "Sounds/SFX/Door.mp3",
+        Window: "Sounds/SFX/Window.mp3",
+        Laugh: "Sounds/SFX/Laugh.mp3",
+        Woodpecker: "Sounds/SFX/Woodpecker.mp3",
+        Water: "Sounds/SFX/Water.mp3",
+        Psst: "Sounds/SFX/psst.mp3",
+        Hilfe: "Sounds/SFX/hilfe.mp3",
+        Miau: "Sounds/SFX/miau.mp3",
+        Purr: "Sounds/SFX/purr.mp3"
     };
     Template.locations = {
         office: {
             name: "office",
-            background: "/Images/Places/office1.jpeg"
+            background: "Images/Places/office1.jpeg"
         },
         shelter: {
             name: "shelter",
-            background: "/Images/Places/shelter1.jpeg"
+            background: "Images/Places/shelter1.jpeg"
         },
         missionone: {
             name: "missionone",
-            background: "/Images/Places/mission1.jpeg"
+            background: "Images/Places/mission1.jpeg"
         },
         kitchen: {
             name: "kitchen",
-            background: "/Images/Places/kitchen.jpeg"
+            background: "Images/Places/kitchen.jpeg"
         },
         bedroom: {
             name: "bedroom",
-            background: "/Images/Places/bedroomv.jpeg"
+            background: "Images/Places/bedroomv.jpeg"
         },
         place: {
             name: "place",
-            background: "/Images/Places/place1.jpeg"
+            background: "Images/Places/place1.jpeg"
         },
         nothing: {
             name: "nothing",
-            background: "/Images/Places/nothing.jpg"
+            background: "Images/Places/nothing.jpg"
         },
         street: {
             name: "street",
-            background: "/Images/Places/wayhome1.jpeg"
+            background: "Images/Places/wayhome1.jpeg"
         },
         future: {
             name: "future",
-            background: "/Images/Places/future.jpeg"
+            background: "Images/Places/future.jpeg"
         },
         grave: {
             name: "grave",
-            background: "/Images/Places/grave.jpeg"
+            background: "Images/Places/grave.jpeg"
         }
     };
     Template.characters = {
@@ -1044,88 +1044,88 @@ var Template;
             name: "Ylva",
             origin: Template.ƒS.ORIGIN.BOTTOMLEFT,
             pose: {
-                normal: "/Images/Charakter/Ylva/normal.png",
-                idiot: "/Images/Charakter/Ylva/idiot.png",
-                handup: "/Images/Charakter/Ylva/handup.png",
-                hips: "/Images/Charakter/Ylva/hips.png",
-                pointing: "/Images/Charakter/Ylva/pointing.png",
-                psst: "/Images/Charakter/Ylva/psst.png",
-                cry: "/Images/Charakter/Ylva/cry.png",
-                laugh: "/Images/Charakter/Ylva/laugh.png",
-                sit: "/Images/Charakter/Ylva/sit.png",
-                sittwo: "/Images/Charakter/Ylva/sittwo.png",
-                sittwotalk: "/Images/Charakter/Ylva/sittwotalk.png",
-                nails: "/Images/Charakter/Ylva/nails.png",
-                last: "/Images/Charakter/Ylva/last.png",
+                normal: "Images/Charakter/Ylva/normal.png",
+                idiot: "Images/Charakter/Ylva/idiot.png",
+                handup: "Images/Charakter/Ylva/handup.png",
+                hips: "Images/Charakter/Ylva/hips.png",
+                pointing: "Images/Charakter/Ylva/pointing.png",
+                psst: "Images/Charakter/Ylva/psst.png",
+                cry: "Images/Charakter/Ylva/cry.png",
+                laugh: "Images/Charakter/Ylva/laugh.png",
+                sit: "Images/Charakter/Ylva/sit.png",
+                sittwo: "Images/Charakter/Ylva/sittwo.png",
+                sittwotalk: "Images/Charakter/Ylva/sittwotalk.png",
+                nails: "Images/Charakter/Ylva/nails.png",
+                last: "Images/Charakter/Ylva/last.png",
                 //NarratorScene
-                happy: "/Images/Charakter/Ylva/narrator/happy.png",
-                stand: "/Images/Charakter/Ylva/narrator/stand.png",
-                hand: "/Images/Charakter/Ylva/narrator/hand.png"
+                happy: "Images/Charakter/Ylva/narrator/happy.png",
+                stand: "Images/Charakter/Ylva/narrator/stand.png",
+                hand: "Images/Charakter/Ylva/narrator/hand.png"
             }
         },
         riaz: {
             name: "Riaz",
             origin: Template.ƒS.ORIGIN.BOTTOMRIGHT,
             pose: {
-                greeting: "/Images/Charakter/Riaz/greeting.png",
-                sad: "/Images/Charakter/Riaz/sad.png",
-                normal: "/Images/Charakter/Riaz/normal.png",
-                cry: "/Images/Charakter/Riaz/cry.png",
-                laugh: "/Images/Charakter/Riaz/laugh.png",
-                sittwo: "/Images/Charakter/Riaz/sittwo.png",
-                sittwoitem: "/Images/Charakter/Riaz/sittwoitem.png",
-                last: "/Images/Charakter/Riaz/last.png",
+                greeting: "Images/Charakter/Riaz/greeting.png",
+                sad: "Images/Charakter/Riaz/sad.png",
+                normal: "Images/Charakter/Riaz/normal.png",
+                cry: "Images/Charakter/Riaz/cry.png",
+                laugh: "Images/Charakter/Riaz/laugh.png",
+                sittwo: "Images/Charakter/Riaz/sittwo.png",
+                sittwoitem: "Images/Charakter/Riaz/sittwoitem.png",
+                last: "Images/Charakter/Riaz/last.png",
                 //NarratorScene
-                happy: "/Images/Charakter/Riaz/narrator/happy.png",
-                hand: "/Images/Charakter/Riaz/narrator/hand.png",
-                stand: "/Images/Charakter/Riaz/narrator/stand.png"
+                happy: "Images/Charakter/Riaz/narrator/happy.png",
+                hand: "Images/Charakter/Riaz/narrator/hand.png",
+                stand: "Images/Charakter/Riaz/narrator/stand.png"
             }
         },
         maddox: {
             name: "Maddox",
             origin: Template.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                normal: "/Images/Charakter/Maddox/normal.png",
-                angry: "/Images/Charakter/Maddox/angry.png",
-                go: "/Images/Charakter/Maddox/go.png",
-                laugh: "/Images/Charakter/Maddox/laugh.png",
-                thinking: "/Images/Charakter/Maddox/thinking.png",
-                grave: "/Images/Charakter/Maddox/grave1.png",
-                ylvabegin: "/Images/Charakter/Maddox/ylva.png"
+                normal: "Images/Charakter/Maddox/normal.png",
+                angry: "Images/Charakter/Maddox/angry.png",
+                go: "Images/Charakter/Maddox/go.png",
+                laugh: "Images/Charakter/Maddox/laugh.png",
+                thinking: "Images/Charakter/Maddox/thinking.png",
+                grave: "Images/Charakter/Maddox/grave1.png",
+                ylvabegin: "Images/Charakter/Maddox/ylva.png"
             }
         },
         cat: {
             name: "",
             origin: Template.ƒS.ORIGIN.BOTTOMLEFT,
             pose: {
-                normal: "/Images/Charakter/Cat/cat.png",
-                last: "/Images/Charakter/Cat/last.png"
+                normal: "Images/Charakter/Cat/cat.png",
+                last: "Images/Charakter/Cat/last.png"
             }
         },
         little: {
             name: "Little",
             origin: Template.ƒS.ORIGIN.TOPCENTER,
             pose: {
-                alone: "./PriceOfFreedom/Images/Charakter/Little/alone.png",
-                trauer: "/PriceOfFreedom/Images/Charakter/Little/trauer.png",
-                wut: "/PriceOfFreedom/Images/Charakter/Little/wut.png",
-                schmerz: "/Images/Charakter/Little/schmerz.png",
-                hoffnungslosigkeit: "/Images/Charakter/Little/hoffnungslosigkeit.png",
-                betteln: "/Images/Charakter/Little/betteln.png",
-                help: "/Images/Charakter/Little/help.png",
-                maddoxbegin: "/Images/Charakter/Little/maddox.png",
-                run1: "/Images/Charakter/Little/run1.png",
-                run2: "/Images/Charakter/Little/run2.png",
-                run3: "/Images/Charakter/Little/run3.png"
+                alone: "Images/Charakter/Little/trauer.png",
+                trauer: "Images/Charakter/Little/trauer.png",
+                wut: "Images/Charakter/Little/wut.png",
+                schmerz: "Images/Charakter/Little/schmerz.png",
+                hoffnungslosigkeit: "Images/Charakter/Little/hoffnungslosigkeit.png",
+                betteln: "Images/Charakter/Little/betteln.png",
+                help: "Images/Charakter/Little/help.png",
+                maddoxbegin: "Images/Charakter/Little/maddox.png",
+                run1: "Images/Charakter/Little/run1.png",
+                run2: "Images/Charakter/Little/run2.png",
+                run3: "Images/Charakter/Little/run3.png"
             }
         },
         Items: {
             name: "Items",
             origin: Template.ƒS.ORIGIN.BOTTOMLEFT,
             pose: {
-                Schatulle: "/Images/Items/schatulle.png",
-                Haarklammer: "/Images/Items/haarklammerk.png",
-                Armband: "/Images/Items/armband.png"
+                Schatulle: "Images/Items/schatulle.png",
+                Haarklammer: "Images/Items/haarklammerk.png",
+                Armband: "Images/Items/armband.png"
             }
         }
     };
@@ -1138,19 +1138,19 @@ var Template;
         schatulle: {
             name: "Schatulle ",
             description: "<br>Die Schatulle hast du auf der ersten Mission mit Riaz geklaut <br>",
-            image: "/Images/Items/schatulle.png",
+            image: "Images/Items/schatulle.png",
             static: true,
         },
         armband: {
             name: "Armband ",
             description: "<br>Das Armband hast du an deinem Lieblingsplatz gefunden <br>",
-            image: "/Images/Items/armband.png",
+            image: "Images/Items/armband.png",
             static: true,
         },
         haarklammer: {
             name: "Haarklammer ",
             description: "<br>Die Haarklammer gab die eine ältere Dame zur Rettung ihrer Katze <br>",
-            image: "/Images/Items/haarklammer.png",
+            image: "Images/Items/haarklammer.png",
             static: true,
         }
     };
