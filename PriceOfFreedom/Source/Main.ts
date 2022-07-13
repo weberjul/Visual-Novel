@@ -193,7 +193,7 @@ namespace Template {
       name: "Little",
       origin: ƒS.ORIGIN.TOPCENTER,
       pose: {
-        alone: "./Images/Charakter/Little/trauer.png",
+        alone: "Images/Charakter/Little/trauer.png",
         trauer: "/PriceOfFreedom/Images/Charakter/Little/trauer.png",
         wut: "/PriceOfFreedom/Images/Charakter/Little/wut.png",
         schmerz: "/Images/Charakter/Little/schmerz.png",
