@@ -75,7 +75,7 @@ namespace Template {
     },
     shelter: {
       name: "shelter",
-      background: "/Images/Places/shelter1.jpeg"
+      background: "PriceOfFreedom/Images/Places/shelter1.jpeg"
 
     },
     missionone: {
@@ -416,7 +416,7 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      { scene: Prolog, name: "Prolog" },
+      { scene: DerNeue, name: "Prolog" },
 
     ];
 
