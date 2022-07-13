@@ -2,7 +2,7 @@ namespace Template {
   export import ƒ = FudgeCore;
   export import ƒS = FudgeStory;
 
-  console.log("FudgeStory template starting");
+  console.log("FudgeStory Price of Freedom starting");
 
 
   //define transitions
@@ -205,7 +205,17 @@ namespace Template {
         run2: "/Images/Charakter/Little/run2.png",
         run3: "/Images/Charakter/Little/run3.png"
       }
+    },
+    Items: {
+      name: "Items",
+      origin: ƒS.ORIGIN.BOTTOMLEFT,
+      pose: {
+        Schatulle: "/Images/Items/schatulle.png",
+        Haarklammer: "/Images/Items/haarklammerk.png",
+        Armband: "/Images/Items/armband.png"
+      }
     }
+
   };
   export let dataForSave = {
     Katze: {
@@ -217,25 +227,26 @@ namespace Template {
   };
   export let items = {
     schatulle: {
-      name: "Schatulle",
-      description: "Die Schatulle hast du auf einer Mission geklaut",
+      name: "Schatulle ",
+      description: "<br>Die Schatulle hast du auf der ersten Mission mit Riaz geklaut <br>",
       image: "/Images/Items/schatulle.png",
-      static: true
+      static: true,
     },
     armband: {
-      name: "Armband",
-      description: "Das Armband hast du an deinem Lieblingsplatz gefunden",
+      name: "Armband ",
+      description: "<br>Das Armband hast du an deinem Lieblingsplatz gefunden <br>",
       image: "/Images/Items/armband.png",
-      static: false,
+      static: true,
 
     },
     haarklammer: {
-      name: "Haarklammer",
-      description: "Die Haarklammer hast du zum Dank der Rettung der Katze bekommen",
+      name: "Haarklammer ",
+      description: "<br>Die Haarklammer gab die eine ältere Dame zur Rettung ihrer Katze <br>",
       image: "/Images/Items/haarklammer.png",
-      static: true
+      static: true,
     }
   };
+
 
 
 
@@ -251,6 +262,31 @@ namespace Template {
       playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
     };
   }
+  export function moveArmband(): ƒS.AnimationDefinition {
+    return {
+      start: { translation: ƒS.positionPercent(10, 50) },
+      end: { translation: ƒS.positionPercent(50, 50) },
+      duration: 1,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+  export function moveSchatulle(): ƒS.AnimationDefinition {
+    return {
+      start: { translation: ƒS.positionPercent(11, 62) },
+      end: { translation: ƒS.positionPercent(20, 62) },
+      duration: 1,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+  export function moveHaarklammer(): ƒS.AnimationDefinition {
+    return {
+      start: { translation: ƒS.positionPercent(57, 64) },
+      end: { translation: ƒS.positionPercent(47, 64) },
+      duration: 1,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
 
 
   // MENU - create Menu with buttons
@@ -380,8 +416,7 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      //  { scene: Prolog, name: "Prolog" },
-      { scene: Monolog, name: "Monolog" },
+      { scene: Monolog, name: "Prolog" },
 
     ];
 

@@ -22,7 +22,10 @@ namespace Template {
     ƒS.Sound.fade(sound.Mission, 0.1, 2, true);
     ƒS.Sound.play(sound.Window, 1, false);
     await ƒS.Location.show(locations.bedroom);
+    await ƒS.Character.show(characters.Items, characters.Items.pose.Schatulle, ƒS.positionPercent(11, 62));
     await ƒS.update(transitions.correct.duration, transitions.correct.alpha, transitions.correct.edge);
+    await ƒS.update();
+
     await ƒS.update();
     await ƒS.Character.show(characters.riaz, characters.riaz.pose.normal, ƒS.positionPercent(100, 100));
     await ƒS.update(1);
@@ -41,6 +44,13 @@ namespace Template {
     await ƒS.Character.show(characters.ylva, characters.ylva.pose.handup, ƒS.positionPercent(3, 100));
     await ƒS.update();
     await ƒS.Speech.tell(characters.ylva, text.Ylva.T0002);
+    await ƒS.Speech.tell(characters.riaz, text.Riaz.T0003);
+    await ƒS.Speech.tell(characters.ylva, text.Ylva.T0003);
+    await ƒS.Character.animate(characters.Items, characters.Items.pose.Schatulle, moveSchatulle());
+    await ƒS.Character.hide(characters.Items);
+    await ƒS.update();
+    ƒS.Inventory.add(items.schatulle);
+
 
 
 

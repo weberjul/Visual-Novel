@@ -216,6 +216,15 @@ declare namespace Template {
                 run3: string;
             };
         };
+        Items: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                Schatulle: string;
+                Haarklammer: string;
+                Armband: string;
+            };
+        };
     };
     let dataForSave: {
         Katze: {
@@ -243,6 +252,9 @@ declare namespace Template {
         };
     };
     function growAnimation(): ƒS.AnimationDefinition;
+    function moveArmband(): ƒS.AnimationDefinition;
+    function moveSchatulle(): ƒS.AnimationDefinition;
+    function moveHaarklammer(): ƒS.AnimationDefinition;
     function incrementSound(): void;
     function decrementSound(): void;
     function showCredits(): void;

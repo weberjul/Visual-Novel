@@ -1,6 +1,6 @@
 namespace Template {
   export async function DerPreis(): ƒS.SceneReturn {
-    console.log("FudgeStory Template Scene starting");
+    console.log("FudgeStory starting");
 
 
     let text = {
@@ -38,8 +38,6 @@ namespace Template {
     await ƒS.update(transitions.normal.duration, transitions.normal.alpha, transitions.normal.edge);
     await ƒS.update();
 
-    ƒS.Inventory.add(items.schatulle);
-    await ƒS.Inventory.open();
 
 
     await ƒS.Character.show(characters.maddox, characters.maddox.pose.normal, ƒS.positionPercent(50, 100));
@@ -96,14 +94,33 @@ namespace Template {
     await ƒS.update();
     await ƒS.Speech.tell(characters.maddox, text.Maddox.T0010);
 
-    ƒS.Character.hide(characters.ylva);
-    ƒS.Character.hide(characters.riaz);
-    ƒS.Character.hide(characters.maddox);
+    if (ƒS.Inventory.getAmount(items.schatulle) && ƒS.Inventory.getAmount(items.armband) && ƒS.Inventory.getAmount(items.haarklammer)) {
+
+      ƒS.Speech.hide();
+      ƒS.Character.hide(characters.ylva);
+      ƒS.Character.hide(characters.riaz);
+      ƒS.Character.hide(characters.maddox);
 
 
-    ƒS.Sound.fade(sound.Sinister, 0, 1);
-    await ƒS.update();
-    return Items();
+      ƒS.Sound.fade(sound.Sinister, 0, 1);
+      await ƒS.update();
+      return Items();
+    }
+    else {
+      await ƒS.Inventory.open();
+      await ƒS.Speech.tell(characters.ylva, "Ich besitze nicht genug Wertgegenstände...");
+      ƒS.Character.hide(characters.ylva);
+      ƒS.Character.hide(characters.riaz);
+      ƒS.Character.hide(characters.maddox);
+      ƒS.Speech.hide();
+      ƒS.Sound.fade(sound.Sinister, 0, 1);
+      await ƒS.update();
+
+      return DieLetzteMission();
+    }
+
+
+
 
 
   }

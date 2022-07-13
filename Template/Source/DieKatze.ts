@@ -49,9 +49,14 @@ namespace Template {
     await ƒS.Speech.tell(characters.ylva, text.Ylva.T0003);
     await ƒS.Speech.tell(characters.riaz, text.Riaz.T0003);
     await ƒS.Character.hide(characters.riaz);
+    await ƒS.Character.show(characters.Items, characters.Items.pose.Haarklammer, ƒS.positionPercent(57, 64));
     await ƒS.Character.show(characters.riaz, characters.riaz.pose.sittwoitem, ƒS.positionPercent(80, 92));
     await ƒS.update();
     await ƒS.Speech.tell(characters.riaz, text.Riaz.T0004);
+    ƒS.Inventory.add(items.haarklammer);
+    await ƒS.Character.animate(characters.Items, characters.Items.pose.Haarklammer, moveHaarklammer());
+    await ƒS.Character.hide(characters.Items);
+    await ƒS.update();
     ƒS.Sound.play(sound.Woodpecker, 10, false);
     await ƒS.Character.hide(characters.riaz);
     await ƒS.Character.show(characters.riaz, characters.riaz.pose.sittwo, ƒS.positionPercent(80, 92));
@@ -63,7 +68,7 @@ namespace Template {
 
 
 
-  
+
     ƒS.Sound.fade(sound.Glass, 0, 1);
     ƒS.Sound.fade(sound.Birds, 0, 0);
     ƒS.Sound.fade(sound.Water, 0, 1);

@@ -127,7 +127,7 @@ var Template;
 var Template;
 (function (Template) {
     async function DerPreis() {
-        console.log("FudgeStory Template Scene starting");
+        console.log("FudgeStory starting");
         let text = {
             Ylva: {
                 T0001: "Es ist kein Scherz Maddox.",
@@ -157,8 +157,6 @@ var Template;
         await Template.ƒS.Location.show(Template.locations.office);
         await Template.ƒS.update(Template.transitions.normal.duration, Template.transitions.normal.alpha, Template.transitions.normal.edge);
         await Template.ƒS.update();
-        Template.ƒS.Inventory.add(Template.items.schatulle);
-        await Template.ƒS.Inventory.open();
         await Template.ƒS.Character.show(Template.characters.maddox, Template.characters.maddox.pose.normal, Template.ƒS.positionPercent(50, 100));
         await Template.ƒS.update();
         document.getElementById("speechBox").setAttribute("style", "display: block;");
@@ -212,12 +210,26 @@ var Template;
         await Template.ƒS.Character.show(Template.characters.maddox, Template.characters.maddox.pose.thinking, Template.ƒS.positionPercent(50, 100));
         await Template.ƒS.update();
         await Template.ƒS.Speech.tell(Template.characters.maddox, text.Maddox.T0010);
-        Template.ƒS.Character.hide(Template.characters.ylva);
-        Template.ƒS.Character.hide(Template.characters.riaz);
-        Template.ƒS.Character.hide(Template.characters.maddox);
-        Template.ƒS.Sound.fade(Template.sound.Sinister, 0, 1);
-        await Template.ƒS.update();
-        return Template.Items();
+        if (Template.ƒS.Inventory.getAmount(Template.items.schatulle) && Template.ƒS.Inventory.getAmount(Template.items.armband) && Template.ƒS.Inventory.getAmount(Template.items.haarklammer)) {
+            Template.ƒS.Speech.hide();
+            Template.ƒS.Character.hide(Template.characters.ylva);
+            Template.ƒS.Character.hide(Template.characters.riaz);
+            Template.ƒS.Character.hide(Template.characters.maddox);
+            Template.ƒS.Sound.fade(Template.sound.Sinister, 0, 1);
+            await Template.ƒS.update();
+            return Template.Items();
+        }
+        else {
+            await Template.ƒS.Inventory.open();
+            await Template.ƒS.Speech.tell(Template.characters.ylva, "Ich besitze nicht genug Wertgegenstände...");
+            Template.ƒS.Character.hide(Template.characters.ylva);
+            Template.ƒS.Character.hide(Template.characters.riaz);
+            Template.ƒS.Character.hide(Template.characters.maddox);
+            Template.ƒS.Speech.hide();
+            Template.ƒS.Sound.fade(Template.sound.Sinister, 0, 1);
+            await Template.ƒS.update();
+            return Template.DieLetzteMission();
+        }
     }
     Template.DerPreis = DerPreis;
 })(Template || (Template = {}));
@@ -355,9 +367,14 @@ var Template;
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0003);
         await Template.ƒS.Speech.tell(Template.characters.riaz, text.Riaz.T0003);
         await Template.ƒS.Character.hide(Template.characters.riaz);
+        await Template.ƒS.Character.show(Template.characters.Items, Template.characters.Items.pose.Haarklammer, Template.ƒS.positionPercent(57, 64));
         await Template.ƒS.Character.show(Template.characters.riaz, Template.characters.riaz.pose.sittwoitem, Template.ƒS.positionPercent(80, 92));
         await Template.ƒS.update();
         await Template.ƒS.Speech.tell(Template.characters.riaz, text.Riaz.T0004);
+        Template.ƒS.Inventory.add(Template.items.haarklammer);
+        await Template.ƒS.Character.animate(Template.characters.Items, Template.characters.Items.pose.Haarklammer, Template.moveHaarklammer());
+        await Template.ƒS.Character.hide(Template.characters.Items);
+        await Template.ƒS.update();
         Template.ƒS.Sound.play(Template.sound.Woodpecker, 10, false);
         await Template.ƒS.Character.hide(Template.characters.riaz);
         await Template.ƒS.Character.show(Template.characters.riaz, Template.characters.riaz.pose.sittwo, Template.ƒS.positionPercent(80, 92));
@@ -542,7 +559,9 @@ var Template;
         Template.ƒS.Sound.fade(Template.sound.Mission, 0.1, 2, true);
         Template.ƒS.Sound.play(Template.sound.Window, 1, false);
         await Template.ƒS.Location.show(Template.locations.bedroom);
+        await Template.ƒS.Character.show(Template.characters.Items, Template.characters.Items.pose.Schatulle, Template.ƒS.positionPercent(11, 62));
         await Template.ƒS.update(Template.transitions.correct.duration, Template.transitions.correct.alpha, Template.transitions.correct.edge);
+        await Template.ƒS.update();
         await Template.ƒS.update();
         await Template.ƒS.Character.show(Template.characters.riaz, Template.characters.riaz.pose.normal, Template.ƒS.positionPercent(100, 100));
         await Template.ƒS.update(1);
@@ -561,6 +580,12 @@ var Template;
         await Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.handup, Template.ƒS.positionPercent(3, 100));
         await Template.ƒS.update();
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0002);
+        await Template.ƒS.Speech.tell(Template.characters.riaz, text.Riaz.T0003);
+        await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0003);
+        await Template.ƒS.Character.animate(Template.characters.Items, Template.characters.Items.pose.Schatulle, Template.moveSchatulle());
+        await Template.ƒS.Character.hide(Template.characters.Items);
+        await Template.ƒS.update();
+        Template.ƒS.Inventory.add(Template.items.schatulle);
         Template.ƒS.Speech.hide();
         Template.ƒS.Character.hide(Template.characters.ylva);
         Template.ƒS.Character.hide(Template.characters.riaz);
@@ -628,6 +653,7 @@ var Template;
         };
         Template.ƒS.Sound.fade(Template.sound.Sinister, 0.1, 2, true);
         await Template.ƒS.Location.show(Template.locations.office);
+        await Template.ƒS.Inventory.open();
         await Template.ƒS.Character.show(Template.characters.maddox, Template.characters.maddox.pose.thinking, Template.ƒS.positionPercent(50, 100));
         await Template.ƒS.Character.show(Template.characters.riaz, Template.characters.riaz.pose.normal, Template.ƒS.positionPercent(100, 100));
         await Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.nails, Template.ƒS.positionPercent(3, 100));
@@ -913,7 +939,7 @@ var Template;
 (function (Template) {
     Template.ƒ = FudgeCore;
     Template.ƒS = FudgeStory;
-    console.log("FudgeStory template starting");
+    console.log("FudgeStory Price of Freedom starting");
     //define transitions
     Template.transitions = {
         time: {
@@ -1091,6 +1117,15 @@ var Template;
                 run2: "/Images/Charakter/Little/run2.png",
                 run3: "/Images/Charakter/Little/run3.png"
             }
+        },
+        Items: {
+            name: "Items",
+            origin: Template.ƒS.ORIGIN.BOTTOMLEFT,
+            pose: {
+                Schatulle: "/Images/Items/schatulle.png",
+                Haarklammer: "/Images/Items/haarklammerk.png",
+                Armband: "/Images/Items/armband.png"
+            }
         }
     };
     Template.dataForSave = {
@@ -1100,22 +1135,22 @@ var Template;
     };
     Template.items = {
         schatulle: {
-            name: "Schatulle",
-            description: "Die Schatulle hast du auf einer Mission geklaut",
+            name: "Schatulle ",
+            description: "<br>Die Schatulle hast du auf der ersten Mission mit Riaz geklaut <br>",
             image: "/Images/Items/schatulle.png",
-            static: true
+            static: true,
         },
         armband: {
-            name: "Armband",
-            description: "Das Armband hast du an deinem Lieblingsplatz gefunden",
+            name: "Armband ",
+            description: "<br>Das Armband hast du an deinem Lieblingsplatz gefunden <br>",
             image: "/Images/Items/armband.png",
-            static: false,
+            static: true,
         },
         haarklammer: {
-            name: "Haarklammer",
-            description: "Die Haarklammer hast du zum Dank der Rettung der Katze bekommen",
+            name: "Haarklammer ",
+            description: "<br>Die Haarklammer gab die eine ältere Dame zur Rettung ihrer Katze <br>",
             image: "/Images/Items/haarklammer.png",
-            static: true
+            static: true,
         }
     };
     function growAnimation() {
@@ -1127,6 +1162,33 @@ var Template;
         };
     }
     Template.growAnimation = growAnimation;
+    function moveArmband() {
+        return {
+            start: { translation: Template.ƒS.positionPercent(10, 50) },
+            end: { translation: Template.ƒS.positionPercent(50, 50) },
+            duration: 1,
+            playmode: Template.ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+        };
+    }
+    Template.moveArmband = moveArmband;
+    function moveSchatulle() {
+        return {
+            start: { translation: Template.ƒS.positionPercent(11, 62) },
+            end: { translation: Template.ƒS.positionPercent(20, 62) },
+            duration: 1,
+            playmode: Template.ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+        };
+    }
+    Template.moveSchatulle = moveSchatulle;
+    function moveHaarklammer() {
+        return {
+            start: { translation: Template.ƒS.positionPercent(57, 64) },
+            end: { translation: Template.ƒS.positionPercent(47, 64) },
+            duration: 1,
+            playmode: Template.ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+        };
+    }
+    Template.moveHaarklammer = moveHaarklammer;
     // MENU - create Menu with buttons
     let gameMenu;
     //  MENU - Audio functions
@@ -1222,8 +1284,7 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
-            //  { scene: Prolog, name: "Prolog" },
-            { scene: Template.Monolog, name: "Monolog" },
+            { scene: Template.Monolog, name: "Prolog" },
         ];
         // start the sequence
         Template.ƒS.Progress.go(scenes);
@@ -1255,7 +1316,9 @@ var Template;
         Template.ƒS.Sound.play(Template.sound.Birds, 10, true);
         Template.ƒS.Sound.play(Template.sound.Water, 10, true);
         await Template.ƒS.Location.show(Template.locations.place);
+        await Template.ƒS.Character.show(Template.characters.Items, Template.characters.Items.pose.Armband, Template.ƒS.positionPercent(10, 50));
         await Template.ƒS.update(Template.transitions.correct.duration, Template.transitions.correct.alpha, Template.transitions.correct.edge);
+        await Template.ƒS.update();
         await Template.ƒS.Character.show(Template.characters.ylva, Template.characters.ylva.pose.sit, Template.ƒS.positionPercent(27, 81));
         await Template.ƒS.update(1);
         document.getElementById("speechBox").setAttribute("style", "display: block;");
@@ -1271,6 +1334,9 @@ var Template;
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0007);
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0008);
         await Template.ƒS.Speech.tell(Template.characters.ylva, text.Ylva.T0009);
+        await Template.ƒS.Character.animate(Template.characters.Items, Template.characters.Items.pose.Armband, Template.moveArmband());
+        await Template.ƒS.Character.hide(Template.characters.Items);
+        await Template.ƒS.update();
         Template.ƒS.Inventory.add(Template.items.armband);
         Template.ƒS.Speech.hide();
         await Template.ƒS.update();
@@ -1280,6 +1346,7 @@ var Template;
         Template.ƒS.Sound.fade(Template.sound.Birds, 0, 0);
         Template.ƒS.Sound.fade(Template.sound.Water, 0, 1);
         Template.ƒS.Sound.fade(Template.sound.Woodpecker, 0, 1);
+        Template.ƒS.Speech.hide();
         await Template.ƒS.update();
         return Template.ZeitVergeht();
     }

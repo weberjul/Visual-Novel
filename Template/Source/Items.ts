@@ -19,6 +19,7 @@ namespace Template {
         };
         ƒS.Sound.fade(sound.Sinister, 0.1, 2, true);
         await ƒS.Location.show(locations.office);
+        await ƒS.Inventory.open();
         await ƒS.Character.show(characters.maddox, characters.maddox.pose.thinking, ƒS.positionPercent(50, 100));
         await ƒS.Character.show(characters.riaz, characters.riaz.pose.normal, ƒS.positionPercent(100, 100));
         await ƒS.Character.show(characters.ylva, characters.ylva.pose.nails, ƒS.positionPercent(3, 100));

@@ -31,7 +31,9 @@ namespace Template {
         ƒS.Sound.play(sound.Water, 10, true);
 
         await ƒS.Location.show(locations.place);
+        await ƒS.Character.show(characters.Items, characters.Items.pose.Armband, ƒS.positionPercent(10, 50));
         await ƒS.update(transitions.correct.duration, transitions.correct.alpha, transitions.correct.edge);
+        await ƒS.update();
         await ƒS.Character.show(characters.ylva, characters.ylva.pose.sit, ƒS.positionPercent(27, 81));
         await ƒS.update(1);
         document.getElementById("speechBox").setAttribute("style", "display: block;");
@@ -47,20 +49,25 @@ namespace Template {
         await ƒS.Speech.tell(characters.ylva, text.Ylva.T0007);
         await ƒS.Speech.tell(characters.ylva, text.Ylva.T0008);
         await ƒS.Speech.tell(characters.ylva, text.Ylva.T0009);
+        await ƒS.Character.animate(characters.Items, characters.Items.pose.Armband, moveArmband());
+        await ƒS.Character.hide(characters.Items);
+        await ƒS.update();
         ƒS.Inventory.add(items.armband);
+
 
 
 
         ƒS.Speech.hide();
         await ƒS.update();
-        await ƒS.Character.hide(characters.ylva); 
+        await ƒS.Character.hide(characters.ylva);
         await ƒS.update(1);
         ƒS.Sound.fade(sound.Glass, 0, 1);
         ƒS.Sound.fade(sound.Birds, 0, 0);
         ƒS.Sound.fade(sound.Water, 0, 1);
         ƒS.Sound.fade(sound.Woodpecker, 0, 1);
+        ƒS.Speech.hide();
         await ƒS.update();
-        
+
         return ZeitVergeht();
     }
 
