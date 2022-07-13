@@ -220,7 +220,8 @@ var Template;
             return Template.Items();
         }
         else {
-            await Template.ƒS.Inventory.open();
+            Template.ƒS.Text.setClass("novelPage");
+            Template.ƒS.Text.print("Du hast nicht genug Items um dich frei zu kaufen");
             await Template.ƒS.Speech.tell(Template.characters.ylva, "Ich besitze nicht genug Wertgegenstände...");
             Template.ƒS.Character.hide(Template.characters.ylva);
             Template.ƒS.Character.hide(Template.characters.riaz);
@@ -1284,7 +1285,7 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
-            { scene: Template.Prolog, name: "Prolog" },
+            { scene: Template.DerPreis, name: "Prolog" },
         ];
         // start the sequence
         Template.ƒS.Progress.go(scenes);

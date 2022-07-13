@@ -211,3 +211,13 @@ button:hover {
   cursor: pointer;
   background-color: #924949;
 }
+
+/*Novel Page*/
+
+.novelPage{
+  background-color: #924949;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: white;
+  border-style: ridge;
+  color: white;
+}

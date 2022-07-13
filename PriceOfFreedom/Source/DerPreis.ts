@@ -107,7 +107,8 @@ namespace Template {
       return Items();
     }
     else {
-      await ƒS.Inventory.open();
+        ƒS.Text.setClass("novelPage"); 
+        ƒS.Text.print("Du hast nicht genug Items um dich frei zu kaufen");
       await ƒS.Speech.tell(characters.ylva, "Ich besitze nicht genug Wertgegenstände...");
       ƒS.Character.hide(characters.ylva);
       ƒS.Character.hide(characters.riaz);
