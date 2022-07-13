@@ -10,12 +10,12 @@ namespace Template {
   export let transitions = {
     time: {
       duration: 3,
-      alpha: "/Transitions/008.jpg",
+      alpha: "Transitions/008.jpg",
       edge: 1
     },
     normal: {
       duration: 2,
-      alpha: "/Transitions/005.jpg",
+      alpha: "Transitions/005.jpg",
       edge: 1
 
     },
@@ -41,8 +41,8 @@ namespace Template {
 
   export let sound = {
     //themes
-    NeverSurrender: "/Sounds/Musik/NeverSurrender.mp3",
-    AFool: "/Sounds/Musik/AFool.mp3",
+    NeverSurrender: "Sounds/Musik/NeverSurrender.mp3",
+    AFool: "Sounds/Musik/AFool.mp3",
     Mission: "/Sounds/Musik/Mission.mp3",
     Dead: "/Sounds/Musik/TakeMeBack.mp3",
     Sinister: "/Sounds/Musik/Sinister.mp3",
@@ -123,12 +123,12 @@ namespace Template {
       name: "Ylva",
       origin: ƒS.ORIGIN.BOTTOMLEFT,
       pose: {
-        normal: "/Images/Charakter/Ylva/normal.png",
-        idiot: "/Images/Charakter/Ylva/idiot.png",
-        handup: "/Images/Charakter/Ylva/handup.png",
-        hips: "/Images/Charakter/Ylva/hips.png",
+        normal: "Images/Charakter/Ylva/normal.png",
+        idiot: "Images/Charakter/Ylva/idiot.png",
+        handup: "Images/Charakter/Ylva/handup.png",
+        hips: "Images/Charakter/Ylva/hips.png",
         pointing: "/Images/Charakter/Ylva/pointing.png",
-        psst: "/Images/Charakter/Ylva/psst.png",
+        psst: "Images/Charakter/Ylva/psst.png",
         cry: "/Images/Charakter/Ylva/cry.png",
         laugh: "/Images/Charakter/Ylva/laugh.png",
         sit: "/Images/Charakter/Ylva/sit.png",
@@ -149,9 +149,9 @@ namespace Template {
       name: "Riaz",
       origin: ƒS.ORIGIN.BOTTOMRIGHT,
       pose: {
-        greeting: "/Images/Charakter/Riaz/greeting.png",
-        sad: "/Images/Charakter/Riaz/sad.png",
-        normal: "/Images/Charakter/Riaz/normal.png",
+        greeting: "Images/Charakter/Riaz/greeting.png",
+        sad: "Images/Charakter/Riaz/sad.png",
+        normal: "Images/Charakter/Riaz/normal.png",
         cry: "/Images/Charakter/Riaz/cry.png",
         laugh: "/Images/Charakter/Riaz/laugh.png",
         sittwo: "/Images/Charakter/Riaz/sittwo.png",
