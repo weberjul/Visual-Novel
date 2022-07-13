@@ -193,9 +193,9 @@ namespace Template {
       name: "Little",
       origin: ƒS.ORIGIN.TOPCENTER,
       pose: {
-        alone: "/Images/Charakter/Little/alone.png",
-        trauer: "/Images/Charakter/Little/trauer.png",
-        wut: "/Images/Charakter/Little/wut.png",
+        alone: "./PriceOfFreedom/Images/Charakter/Little/alone.png",
+        trauer: "/PriceOfFreedom/Images/Charakter/Little/trauer.png",
+        wut: "/PriceOfFreedom/Images/Charakter/Little/wut.png",
         schmerz: "/Images/Charakter/Little/schmerz.png",
         hoffnungslosigkeit: "/Images/Charakter/Little/hoffnungslosigkeit.png",
         betteln: "/Images/Charakter/Little/betteln.png",
@@ -416,7 +416,7 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      { scene: DerPreis, name: "Prolog" },
+      { scene: Prolog, name: "Prolog" },
 
     ];
 

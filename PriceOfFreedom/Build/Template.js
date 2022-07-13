@@ -1106,9 +1106,9 @@ var Template;
             name: "Little",
             origin: Template.ƒS.ORIGIN.TOPCENTER,
             pose: {
-                alone: "/Images/Charakter/Little/alone.png",
-                trauer: "/Images/Charakter/Little/trauer.png",
-                wut: "/Images/Charakter/Little/wut.png",
+                alone: "./PriceOfFreedom/Images/Charakter/Little/alone.png",
+                trauer: "/PriceOfFreedom/Images/Charakter/Little/trauer.png",
+                wut: "/PriceOfFreedom/Images/Charakter/Little/wut.png",
                 schmerz: "/Images/Charakter/Little/schmerz.png",
                 hoffnungslosigkeit: "/Images/Charakter/Little/hoffnungslosigkeit.png",
                 betteln: "/Images/Charakter/Little/betteln.png",
@@ -1285,7 +1285,7 @@ var Template;
         gameMenu =
             Template.ƒS.Menu.create(Template.inGameMenu, buttonFunctionalities, "gameMenu");
         let scenes = [
-            { scene: Template.DerPreis, name: "Prolog" },
+            { scene: Template.Prolog, name: "Prolog" },
         ];
         // start the sequence
         Template.ƒS.Progress.go(scenes);
